@@ -1,0 +1,18 @@
+%module bindings
+
+%include <typemaps.i>
+%include <stl.i>
+
+%{
+#include "bindings.hpp"
+%}
+
+%include "bindings.hpp"
+
+%template(GoStringResult) std::pair<std::string, std::string>;
+%template(GoStringResultInst) GoResult<std::string>;
+
+%template(VecString) std::vector<std::string>;
+%template(GoVecStringResult) std::pair<std::vector<std::string>, std::string>;
+%template(GoVecStringResultInst) GoResult<std::vector<std::string>>;
+

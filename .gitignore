@@ -1,0 +1,11 @@
+.env
+.cache
+/forgescript
+compile_commands.json
+*_swig.go
+*_swig.go.d
+*_wrap.cxx
+*.zip
+*.tar
+*.tar.gz
+*.o

@@ -1,0 +1,5 @@
+-std=c++23
+-I/usr/include/python3.13
+-Isubmodules/pybind11/include
+-Isubmodules/nlohmann_json/include
+-Ipkg
