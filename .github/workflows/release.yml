@@ -57,6 +57,9 @@ jobs:
             org.opencontainers.image.source=${{ env.SOURCE_URL }}
             org.opencontainers.image.description=${{ env.CONTAINER_IMAGE_DESCRIPTION }}
             org.opencontainers.image.licenses=${{ env.CONTAINER_IMAGE_LICENSE }}
+          build-args: |
+            GIT_HASH=${{ github.sha }}
+            EMBED_VERSION=${{ github.ref_name }}
 
   release:
     name: Create new repository release

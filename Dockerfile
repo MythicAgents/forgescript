@@ -6,9 +6,12 @@ RUN apt-get update -y && \
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
+ARG GIT_HASH
+ARG EMBED_VERSION
+
 COPY . .
 RUN go mod tidy
-RUN env CGO_CFLAGS='-O2' go build -v -x -ldflags='-s -w'
+RUN env CGO_CFLAGS='-O2' go build -v -x -ldflags="-s -w -X 'github.com/MythicAgents/forgescript/pkg/versioninfo.embedVersion=${EMBED_VERSION}' -X 'github.com/MythicAgents/forgescript/pkg/versioninfo.embedGitRevision=${GIT_HASH}'"
 
 FROM docker.io/library/debian:stable AS runner
 
