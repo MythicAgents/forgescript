@@ -6,6 +6,6 @@
   "exclude_documentation_c2": true,
   "exclude_agent_icons": true,
   "remote_images": {
-    "forgescript": "ghcr.io/mythicagents/forgescript:v0.0.1"
+    "forgescript": "ghcr.io/mythicagents/forgescript:v0.0.2"
   }
 }
